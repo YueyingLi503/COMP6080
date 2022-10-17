@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Slackr</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- You can add your styles and scripts here -->
+  <link rel="stylesheet" type="text/css" media="screen" href="styles/provided.css" />
+  <script type="module" src="src/helpers.js"></script>
+</head>
+
+<body>
+  <!-- This is an example app structure, you can modify this as much as you choose -->
+  <header class="banner">
+    <h1>Slackr</h1>
+  </header>
+    <!-- app goes here -->
+    
+  <div id="container"></div>
+  <div id="channel-page" style= "display:none;">
+    <div id="left">
+      <div id="all" style="flex: 2;border: 2px solid;border-color: black;text-align: center; ">
+        <button id="get-personal" style="width: 50%;height: 25px; margin-top: 30px;">Personal Profile</button><br>
+        <button id="create-channel-btn" style="width: 50%;height:25px;border-radius: 5px; margin-top: 30px">Create Channel</button><br>
+        <button id="logout-btn" style="width: 50%; margin-top: 30px">Logout</button><br>
+      </div>
+      <div id="channel-list" style="flex: 7;height: 900px;overflow: auto;border: 2px solid; border-color: black;">
+        <button id="pub-button" style="border-radius: 5px; width: 48%; height: 5%;">public channel</button>
+        <button id="pri-button" style="border-radius: 5px; width: 48%; height: 5%;">private channel</button>
+        <div id="channels"></div>
+      </div>
+      <div id="create" style="flex: 12;">
+        <div id="create-channel" style="text-align: center; margin-top: 5%;margin-left: 5%;">
+          <label for="channel-name">Channel Name</label>
+          <input type="text" id="channel-name"><br>
+          channel property
+          <select id="channel-property">
+            <option id="pri"value="private">private</option>
+            <option id="pub"value="public">public</option>
+          </select><br>
+          description <br>
+          <textarea id="description" cols="30" rows="15"></textarea><br>
+          <button id="submit-channel">submit</button>
+        </div>
+      </div>
+      <div id="view-page">
+        <div id="view-channel-page">
+          <form id="view-channel">
+            <label for="view-channel-name">Channel Name</label>
+            <input type="text" id="view-channel-name"><br>
+            <label for="view-channel-id">Channel Name</label>
+            <input type="text" id="view-channel-id"><br>
+            <label for="creator">creator</label>
+            <input type="text" id="creator"><br>
+            <label for="view-property">public/private</label>
+            <input type="text" id="view-property"><br>
+            <label for="creation-time">Creation-time</label>
+            <input type="text" id="creation-time"><br>
+            <span>description</span>
+            <textarea id="view-description" cols="50" rows="20"></textarea><br>
+            <button id="edit">edit</button>
+          </form>
+        </div>
+        <div id="edit-profile-page">
+          <form id="edit-profile">
+            <label for="edit-profile-name">Name</label>
+            <input type="text" id="edit-profile-name"><br>
+            <label for="edit-password">Password</label>
+            <input type="text" id="edit-password"><br>
+            <label for="edit-email">email</label>
+            <input type="text" id="edit-email"><br>
+            <label for="bio">bio</label>
+            <input type="text" id="bio"><br>
+            <label for="imag">image</label>
+            <input type="file" id="imag"><br>
+            <button id="edit-profile-btn">edit</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div id="channel-message">
+      <div id="edit-message-page">
+        <div>Message content <br>
+          <textarea id="edit-message-field" cols="30" rows="10"></textarea> <br>
+        </div>
+        <button id="close-edit-message-page">close</button>
+        <button id="submit-edit-message-page">confirm</button>
+      </div>
+      <div id="message-box">
+        <div class="message-sender-info">
+          <div class="message-sender"></div>
+          <div class="message-sender-photo"></div>
+        </div>
+        <div class="time-and-message">
+          <div class="message-time"></div>
+          <div class="message-message"></div>
+          <div class="message-photo"></div>
+          <div id="message-function">
+            <button class="message-delete">Delete</button>
+            <button class="message-edit">Edit</button>
+            <button class="message-react">React</button>
+            <button class="message-pin">Pin</button>
+            <button class="message-unreact">Unreact</button>
+          </div>
+          <div id="emoji-bar">
+            <button class="emoji">&#128541</button>
+            <button class="emoji">&#128545</button>
+            <button class="emoji">&#128552</button>
+            <button class="emoji">&#128571</button>
+          </div>
+        </div>
+        <div class="message-status">
+          <div class="message-pin">pinned</div>
+          <div class="message-react">react</div>
+        </div>
+      </div>
+      <div id="send-message">
+        <textarea id="send-box" cols="25" rows="1"></textarea>
+        <input type="file" id="send-imag">
+        <button id="send-btn">Send</button>
+      </div>
+
+    </div>
+  
+  
+  </div>
+  <footer>
+    <p>&copy; Slackr</p>
+  </footer>
+  <script type="module" src="src/main.js"></script>
+</body>
+
+</html>

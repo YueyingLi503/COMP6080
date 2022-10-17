@@ -1,0 +1,98 @@
+
+/* base styles, feel free to edit */
+html, body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    height: 100%;
+    font-family: -apple-system, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+#get-personal{
+    border-radius: 5px;
+}
+#message-box {
+    display: none;
+}
+#channel-page {
+    margin-left: 17px;
+}
+#view-page {
+    display: flex;
+    flex-direction: row;
+}
+#edit-message-page {
+    display: none;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+#view-channel-page {
+    flex: 5;
+}
+#send-message{
+    display: flex;
+    flex-direction: row;
+    padding-left: 20px;
+    padding-right: 15px;
+
+}
+#send-box{
+    flex:6;
+}
+#send-imag{
+    flex: 2;
+}
+#send-btn{
+    position: relative;
+    margin-bottom: 2px;
+    flex:2;
+    margin-right: 78px;
+}
+#edit-profile-page{
+    display: none;
+    flex: 5;
+}
+.time-and-message {
+    border-style: solid;
+    border-radius: 5px;
+    border-width: 2px;
+    padding: 5px;
+    flex: 6;
+}
+.message-photo {
+    display: none;
+}
+.message-sender-info{
+    flex:2;
+}
+.message-status{
+    flex: 2;
+    font-size: 12;
+}
+.message-message{
+    text-align: left;
+}
+.message-time{
+    font-size: 12px;
+}
+#container{
+    padding: auto;
+}
+.message {
+    display: flex;
+    grid-gap: 20px;
+    margin: 25px;
+}
+#emoji-bar {
+    position: relative;
+    display:none;
+}
+#message-function{
+    position: relative;
+}
+#create{
+    display: none;
+}
+#view-page{
+    margin-left: 5%;
+    display: none;
+}
